@@ -1,0 +1,106 @@
+:root {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #ecd0ec;/*classic rose background*/
+  color: #461d3a;/*brown coffee text*/
+  font-size: 18px;
+}
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ba71a2;/*pearly purple button*/
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #461d3a;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.confession-grid {
+  display: flex; /*so the sticky notes lay out in a row*/
+  flex-wrap: wrap; /*so the sticky notes wrap to the next line*/
+  gap: 20px; /*space between the sticky notes*/
+  margin-top: 30px; /*space above the first row of sticky notes*/
+  justify-content: center; /*center the sticky notes*/
+}
+
+.sticky-note{
+  position: relative;/*positioning for the sticky note*/
+  background-color: #d183a9;/*middle purple sticky note*/
+  padding: 20px;/*inner space around text*/
+  border-radius: 10px;/*rounded corners cause they're cute duh*/
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);/*really subtle shadow for depth*/
+  width:200px;/*width of the sticky note*/
+  height: auto;/*let height grow with content*/
+  margin: 10px;/*space between sticky notes*/
+  min-height: 100px;/*minimum height of the sticky note*/
+  font-family: 'Comic Sans MS', cursive,sans-serif;/*font for the sticky note*/
+  transition: transform 0.2s;/*smooth transition for hover effect*/
+}
+
+/*I am so unserious*/
+
+.sticky-note:hover{
+  transform: scale(1.03);/*slightly larger on hover(slight zoom)*/
+}
+
+.confession-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 1.1rem; /* makes the text bigger and more readable */
+  border: 2px solid #dabbe0; /* matches sticky note color */
+  border-radius: 10px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  resize: none; /* optional: prevents dragging to resize */
+  background-color: #fff0f6; /* soft pastel background */
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.05); /* very soft shadow */
+  margin-bottom: 20px;
+}
+
+.delete-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-in-out;
+}
+  
+.delete-icon:hover {
+  opacity: 1;
+}
+  
